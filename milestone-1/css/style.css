@@ -9,7 +9,6 @@
     max-width: 1200px;
     min-width: 800px;
     height: 90%;
-    border: 1px solid black;
     background-color: white;
     padding: 0;
 }
@@ -96,6 +95,24 @@
     border: 1px solid #E2E2E2;
 }
 
+.chat .header .contactProfile img{
+    width: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.chat .header .contactProfile .infoContact span{
+    font-size: 14px;
+    color: #6681A2;
+}
+
+.chat .header .settingContactProfile i{
+    color: #B1B1B1;
+    font-size: 18px;
+    cursor: pointer;
+}
+
 .chat .chatDiv{
     height: calc(100% - 120px);
     overflow-y: scroll;
@@ -106,5 +123,11 @@
     height: 60px;
     background-color: #F3EEEA;
     border: 1px solid #E2E2E2;
+}
+
+.chat .footer i{
+    color: #6B7376;
+    font-size: 20px;
+    cursor: pointer;
 }
 
