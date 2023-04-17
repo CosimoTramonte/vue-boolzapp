@@ -7,6 +7,7 @@
 .background .ct-container{
     width: 80%;
     max-width: 1200px;
+    min-width: 800px;
     height: 90%;
     border: 1px solid black;
     background-color: white;
@@ -17,53 +18,93 @@
     width: 35%;
     min-width: 200px;
     height: 100%;
-    background-color: rgba(0, 0, 255, 0.452);
 }
 
 .chat{
     width: 65%;
     min-width: 450px;
     height: 100%;
-    background-color: rgba(255, 0, 0, 0.473);
 }
 
 .contacts .header{
     height: 60px;
-    background-color: rgba(0, 0, 255, 0.452);
-    border: 1px solid black;
+    background-color: #EAEAEA;
+    border: 1px solid #E2E2E2;
+}
+
+.contacts .header .myProfile img{
+    width: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.contacts .header .settingsMyProfile i{
+    color: #B1B1B1;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 .contacts .notifications{
     height: 60px;
-    background-color: rgba(0, 0, 255, 0.452);
-    border: 1px solid black;
+    background-color: #8EDAFC;
+}
+
+.contacts .notifications i{
+    background-color: white;
+    padding: 12px;
+    border-radius: 50px;
+    color: #8EDAFC;
+    margin-left: 18px;
+    cursor: pointer;
+    
+}
+
+.contacts .notifications div span{
+    display: block;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.contacts .notifications div span:first-of-type{
+    font-weight: bold;
+}
+
+.contacts .notifications div span:last-of-type{
+    color: #6681A2;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .contacts .research{
-    height: 30px;
-    background-color: rgba(0, 0, 255, 0.452);
-    border: 1px solid black;
+    height: 50px;
+    background-color: #ECECEC;
+}
+
+.contacts .research .input-group{
+    size: 10px;
 }
 
 .contacts .contactsDiv{
-    height: calc(100% - 150px);
+    height: calc(100% - 170px);
     overflow-y: scroll;
+    background-color: #FFFFFF;
 }
 
 .chat .header{
     height: 60px;
-    background-color: rgba(255, 0, 0, 0.473);
-    border: 1px solid black;
+    background-color: #EAEAEA;
+    border: 1px solid #E2E2E2;
 }
 
 .chat .chatDiv{
     height: calc(100% - 120px);
     overflow-y: scroll;
+    background-image: url("../img/mine.jpg");
 }
 
 .chat .footer{
     height: 60px;
-    background-color: rgba(255, 0, 0, 0.473);
-    border: 1px solid black;
+    background-color: #F3EEEA;
+    border: 1px solid #E2E2E2;
 }
 
