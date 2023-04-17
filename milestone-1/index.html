@@ -52,7 +52,20 @@
                         </div>
                     </div>
 
-                    <div class="contactsDiv"></div>
+                    <div class="contactsDiv">
+                        <div v-for="(contact,i) in contacts" class="contact d-flex justify-content-between align-items-center">
+                            <div class="contactProfile d-flex align-items-center">
+                                <img :src="contact.avatar" alt="contact profile">
+                                <div class="infoContact">
+                                    <h6 class="m-0">{{contact.name}}</h6>
+                                    <span>{{contact.messages[0].message}}</span>
+                                </div>
+                            </div>
+                            <div class="lastAccess">
+                                <span>12:00</span>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 
@@ -73,7 +86,18 @@
                         </div>
                     </div>
 
-                    <div class="chatDiv"></div>
+                    <div class="chatDiv d-flex flex-column">
+                        <div class="sent">
+                            <p class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ullam architecto corrupti, nisi praesentium impedit quaerat? Adipisci magni necessitatibus voluptates cupiditate corporis cum labore totam dolore distinctio. Veniam, officia sint?</p>
+                        </div>
+                        <div class="sent">
+                            <p class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ullam architecto corrupti, nisi praesentium impedit quaerat? Adipisci magni necessitatibus voluptates cupiditate corporis cum labore totam dolore distinctio. Veniam, officia sint?</p>
+                        </div>
+                        <div class="received">
+                            <p class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ullam architecto corrupti, nisi praesentium impedit quaerat? </p>
+                        </div>
+                        
+                    </div>
 
                     <div class="footer d-flex justify-content-around align-items-center">
                         <i class="fa-regular fa-face-smile"></i>
@@ -87,6 +111,6 @@
         </div>
     </div>
 
-    <script src="js/script.js"></script>
+    <script type="module" src="js/script.js"></script>
 </body>
 </html>

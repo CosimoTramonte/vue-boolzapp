@@ -1,5 +1,7 @@
-
+import contacts from "./db.js";
 const { createApp } = Vue;
+
+console.log(contacts);
 
 
 createApp({
@@ -7,7 +9,7 @@ createApp({
     data(){
 
         return{
-            
+            contacts,
         }
     }
 
