@@ -10,16 +10,7 @@ createApp({
 
         return{
             contacts,
-            counter: 0,
-            newMessageToSent: "",
         }
-    },
-
-    methods:{
-        changeProfile(index){
-            this.counter = index
-        },
-
     }
 
 }).mount('#app');
