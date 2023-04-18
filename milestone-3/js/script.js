@@ -1,4 +1,3 @@
-import contacts from "./db.js";
 const { createApp } = Vue;
 
 const dt = luxon.DateTime
