@@ -22,8 +22,10 @@ createApp({
 
         addMessage(){
 
+            this.printClock()
+
             const newMessage = {
-                date: this.printClock(),
+                date: this.clock,
                 message: this.newMessageToSent,
                 status: 'sent'
             }
@@ -37,8 +39,11 @@ createApp({
         autoMessage(){
 
             setTimeout(() =>{
+
+                this.printClock()
+
                 const newAutoMessage = {
-                    date: this.printClock(),
+                    date: this.clock,
                     message: "ok",
                     status: 'received'
                 }

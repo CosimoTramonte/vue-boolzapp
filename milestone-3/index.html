@@ -81,7 +81,7 @@
                             <img :src="contacts[counter].avatar" alt="contact profile">
                             <div class="infoContact">
                                 <h6 class="m-0">{{contacts[counter].name}}</h6>
-                                <span>Ultimo accesso oggi alle 12:00</span>
+                                <span>{{clock}}</span>
                             </div>
                         </div>
 
@@ -96,8 +96,9 @@
                     <div class="chatDiv d-flex flex-column">
 
                         <div  v-for="(singleMessage,i) in contacts[counter].messages">
-                            <div :class="singleMessage.status">
+                            <div :class="singleMessage.status" class="position-relative">
                                 <p class="message">{{singleMessage.message}}</p>
+                                <span class="dateMessageChat">{{singleMessage.date}}</span>    
                             </div>
                         </div>
 

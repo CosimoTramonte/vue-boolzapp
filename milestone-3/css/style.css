@@ -15,7 +15,7 @@
 
 .contacts{
     width: 35%;
-    min-width: 200px;
+    min-width: 360px;
     height: 100%;
 }
 
@@ -102,7 +102,7 @@
     height: calc(100% - 170px);
     overflow-y: scroll;
     background-color: #FFFFFF;
-    min-width: 323px;
+    min-width: 350px;
 }
 
 .contacts .contactsDiv .contact{
@@ -181,14 +181,18 @@
 
 .chat .chatDiv .received .message{
     max-width: 65%;
+    min-width: 20%;
     border-radius: 0px 30px;
     padding: 20px;
+    word-wrap: break-word;
 }
 
 .chat .chatDiv .sent .message{
     max-width: 65%;
+    min-width: 20%;
     border-radius: 30px 0px;
     padding: 20px;
+    word-wrap: break-word;
 }
 
 .chat .chatDiv .received{
@@ -199,6 +203,22 @@
 
 .chat .chatDiv .received p{
     background-color: white;
+}
+
+.chat .chatDiv .sent .dateMessageChat{
+    position: absolute;
+    font-size: 10px;
+    bottom: 17px;
+    right: 25px;
+    color: #a0a0a0;
+}
+
+.chat .chatDiv .received .dateMessageChat{
+    position: absolute;
+    font-size: 10px;
+    bottom: 17px;
+    left: 25px;
+    color: #a0a0a0;
 }
 
 .chat .chatDiv .sent{
@@ -222,4 +242,3 @@
     font-size: 20px;
     cursor: pointer;
 }
-
