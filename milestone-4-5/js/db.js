@@ -3,6 +3,8 @@ const contacts = [
         name: 'Michele',
         avatar: 'img/avatar_1.jpg',
         visible: true,
+        status:"La mia famiglia è la mia vita 👪",
+        online: true,
         messages: [
             {
                 date: '10/01/2020 15:30:55',
@@ -25,6 +27,8 @@ const contacts = [
         name: 'Fabio',
         avatar: 'img/avatar_2.jpg',
         visible: true,
+        status:"Amo il calcio ⚽",
+        online: false,
         messages: [
             {
                 date: '20/03/2020 16:30:00',
@@ -47,6 +51,8 @@ const contacts = [
         name: 'Samuele',
         avatar: 'img/avatar_3.jpg',
         visible: true,
+        status:"Mi piace mangiare tanto 🍲😋",
+        online: false,
         messages: [
             {
                 date: '28/03/2020 10:10:40',
@@ -66,9 +72,11 @@ const contacts = [
         ],
     },
     {
-        name: 'Alessandro B.',
+        name: 'Andrea',
         avatar: 'img/avatar_4.jpg',
         visible: true,
+        status:"Amo il mio cavallo 🐎",
+        online: true,
         messages: [
             {
                 date: '10/01/2020 15:30:55',
@@ -86,6 +94,8 @@ const contacts = [
         name: 'Alessandro L.',
         avatar: 'img/avatar_5.jpg',
         visible: true,
+        status:"Sono libero 🆓🆓",
+        online: true,
         messages: [
             {
                 date: '10/01/2020 15:30:55',
@@ -103,6 +113,8 @@ const contacts = [
         name: 'Claudia',
         avatar: 'img/avatar_6.jpg',
         visible: true,
+        status:"Sono stanco, non scrivetemi 😫",
+        online: false,
         messages: [
             {
                 date: '10/01/2020 15:30:55',
@@ -125,6 +137,8 @@ const contacts = [
         name: 'Federico',
         avatar: 'img/avatar_7.jpg',
         visible: true,
+        status:"Al lavoro 👷",
+        online: true,
         messages: [
             {
                 date: '10/01/2020 15:30:55',
@@ -142,6 +156,8 @@ const contacts = [
         name: 'Davide',
         avatar: 'img/avatar_8.jpg',
         visible: true,
+        status:"Sto studiando 📚📚",
+        online: false,
         messages: [
             {
                 date: '10/01/2020 15:30:55',

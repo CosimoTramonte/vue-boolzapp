@@ -26,11 +26,14 @@
 <body>
     
     <div id="app">
+        <!-- BACKGROUND -->
         <div class="background d-flex justify-content-center align-items-center">
             <div class="ct-container d-flex">
 
+                <!-- ASIDE CONTACTS  -->
                 <div class="contacts">
 
+                    <!-- MY PROFILE -->
                     <div class="header d-flex justify-content-between align-items-center">
 
                         <div class="myProfile d-flex align-items-center mx-3">
@@ -46,6 +49,7 @@
                         
                     </div>
 
+                    <!-- NOTIFICATIONS -->
                     <div class="notifications d-flex align-items-center">
 
                         <i class="fa-solid fa-bell-slash"></i>
@@ -56,6 +60,7 @@
 
                     </div>
 
+                    <!-- RESEARCH PROFILE -->
                     <div class="research d-flex align-items-center">
 
                         <div class="input-group mx-2">
@@ -65,11 +70,12 @@
 
                     </div>
 
+                    <!-- PROFILES -->
                     <div class="contactsDiv">
 
                         <div v-for="(contact,i) in contacts" @click="changeProfile(i)">
 
-                            <div v-if="contact.visible" class="contact d-flex justify-content-between align-items-center">
+                            <div v-if="contact.visible" class="contact d-flex justify-content-between align-items-center" :class="{'active' : i === counter}">
 
                                 <div class="contactProfile d-flex align-items-center">
                                     <img :src="contact.avatar" alt="contact profile">
@@ -86,15 +92,18 @@
                             </div>
                             
                         </div>
+
                     </div>
 
                 </div>
 
+                <!-- SIDE CHAT -->
                 <div class="chat">
 
+                    <!-- HEADER CHAT -->
                     <div class="header d-flex justify-content-between align-items-center">
 
-                        <div class="contactProfile d-flex align-items-center mx-3">
+                        <div class="contactProfile d-flex align-items-center mx-3" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <img :src="contacts[counter].avatar" alt="contact profile">
                             <div class="infoContact">
                                 <h6 class="m-0">{{contacts[counter].name}}</h6>
@@ -108,8 +117,33 @@
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
 
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                <div class="modal-header d-flex align-items-center">
+                                    <img :src="contacts[counter].avatar" alt="contact profile">
+                                    <div class="infoContact">
+                                        <h6 class="m-0">{{contacts[counter].name}}</h6>
+                                    </div>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <h6>Info</h6>
+                                  <p>{{contacts[counter].status}}</p>
+                                </div>
+                                <div class="modal-body">
+                                    <h6>Status</h6>
+                                    <h5 v-if="!(contacts[counter].online)" class="text-danger">OFFLINE</h5>
+                                    <h5 v-if="contacts[counter].online" class="text-success">ONLINE</h5>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+
                     </div>
 
+                    <!-- CHAT PART -->
                     <div class="chatDiv d-flex flex-column">
 
                         <div  v-for="(singleMessage,i) in contacts[counter].messages">
@@ -130,6 +164,7 @@
 
                     </div>
 
+                    <!-- WRITE MESSAGE -->
                     <div class="footer d-flex justify-content-around align-items-center">
 
                         <i class="fa-regular fa-face-smile"></i>
@@ -139,7 +174,6 @@
                             <i @click="addMessage" class="fa-solid fa-paper-plane mx-3"></i>
                         </div>
                         
-
                     </div>
 
                 </div>

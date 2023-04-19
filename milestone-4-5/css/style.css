@@ -54,6 +54,20 @@
     color: #6B7376;
 }
 
+.modal-header img{
+    width: 50px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.modal-header {
+    background-color: #009688;
+    color: white;
+}
+
+.modal-body{
+    background-color: #EAEAEA;
+}
 
 .contacts .notifications{
     height: 60px;
@@ -108,6 +122,10 @@
 .contacts .contactsDiv .contact{
     border-bottom: 1px solid #ebebeb;
     padding: 10px;
+}
+
+.contacts .contactsDiv .contact.active{
+    background-color: #ECECEC;
 }
 
 .contacts .contactsDiv .contact:hover{
