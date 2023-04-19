@@ -1,0 +1,276 @@
+.background{
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(#009688 15%, #DBDBD2 15%);
+}
+
+.background .ct-container{
+    width: 80%;
+    max-width: 1200px;
+    min-width: 800px;
+    height: 90%;
+    background-color: white;
+    padding: 0;
+}
+
+.contacts{
+    width: 35%;
+    min-width: 360px;
+    height: 100%;
+}
+
+.chat{
+    width: 65%;
+    min-width: 450px;
+    height: 100%;
+}
+
+.contacts .header{
+    height: 60px;
+    background-color: #EAEAEA;
+    border: 1px solid #E2E2E2;
+}
+
+.contacts .header .myProfile img{
+    width: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.contacts .header .myProfile:hover{
+    background-color: #d4d4d4;
+    cursor: pointer;
+    
+}
+
+.contacts .header .settingsMyProfile i{
+    color: #B1B1B1;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.contacts .header .settingsMyProfile i:hover{
+    color: #6B7376;
+}
+
+
+.contacts .notifications{
+    height: 60px;
+    background-color: #8EDAFC;
+}
+
+.contacts .notifications i{
+    background-color: white;
+    padding: 12px 10px;
+    border-radius: 50px;
+    color: #8EDAFC;
+    margin-left: 18px;
+    cursor: pointer;  
+}
+
+
+.contacts .notifications div span{
+    display: block;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.contacts .notifications div span:first-of-type{
+    font-weight: bold;
+}
+
+.contacts .notifications div span:last-of-type{
+    color: #6681A2;
+    cursor: pointer;
+}
+
+.contacts .notifications div span:last-of-type:hover{
+    text-decoration: underline;
+}
+
+.contacts .research{
+    height: 50px;
+    background-color: #ECECEC;
+}
+
+.contacts .research .input-group{
+    size: 10px;
+}
+
+.contacts .contactsDiv{
+    height: calc(100% - 170px);
+    overflow-y: scroll;
+    background-color: #FFFFFF;
+    min-width: 350px;
+}
+
+.contacts .contactsDiv .contact{
+    border-bottom: 1px solid #ebebeb;
+    padding: 10px;
+}
+
+.contacts .contactsDiv .contact:hover{
+    background-color: #ECECEC;
+    cursor: pointer;
+}
+
+.contacts .contactsDiv .contactProfile img{
+    width: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.contacts .contactsDiv .contactProfile span{
+    font-size: 12px;
+    color: #6681A2;
+    display: block;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contacts .contactsDiv .lastAccess{
+    font-size: 12px;
+    color: #6681A2;
+    margin-bottom: 20px;
+    text-align: end;
+}
+
+.chat .header{
+    height: 60px;
+    background-color: #EAEAEA;
+    border: 1px solid #E2E2E2;
+}
+
+.chat .header .contactProfile img{
+    width: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 2px;
+}
+
+.chat .header .contactProfile:hover{
+    background-color: #d4d4d4;
+    cursor: pointer;
+}
+
+.chat .header .contactProfile .infoContact span{
+    font-size: 14px;
+    color: #6681A2;
+}
+
+.chat .header .settingContactProfile i{
+    color: #B1B1B1;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.chat .header .settingContactProfile i:hover{
+    color: #6B7376;
+}
+
+.chat .chatDiv{
+    height: calc(100% - 120px);
+    overflow-y: scroll;
+    background-image: url("../img/mine.jpg");
+    padding-top: 20px;
+}
+
+.chat .chatDiv .received .message{
+    max-width: 65%;
+    min-width: 20%;
+    border-radius: 0px 30px 0px 30px;
+    padding: 20px;
+    word-wrap: break-word;
+}
+
+.chat .chatDiv .sent .message{
+    max-width: 65%;
+    min-width: 20%;
+    border-radius: 30px 0px;
+    padding: 20px;
+    word-wrap: break-word;
+}
+
+.chat .chatDiv .received{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+.chat .chatDiv .received p{
+    background-color: white;
+}
+
+.chat .chatDiv .sent .dateMessageChat{
+    position: absolute;
+    font-size: 10px;
+    bottom: 17px;
+    right: 25px;
+    color: #a0a0a0;
+}
+
+.chat .chatDiv .received .dateMessageChat{
+    position: absolute;
+    font-size: 10px;
+    bottom: 17px;
+    left: 25px;
+    color: #a0a0a0;
+}
+
+.chat .chatDiv .received .dropdown i{
+    display: none;
+    position: absolute;
+    right: 100px;
+    top: 3px;
+    color: #a0a0a0;
+}
+
+.chat .chatDiv .sent .dropdown i{
+    display: none;
+    position: absolute;
+    right: 8px;
+    top: 3px;
+    color: #a0a0a0;
+}
+
+.chat .chatDiv .dropdown:hover i{
+    display: block;
+    cursor: pointer;
+}
+
+.chat .chatDiv .sent .message:hover ~ .dropdown i {
+    display: block;
+    cursor: pointer;
+}
+
+.chat .chatDiv .received .message:hover ~ .dropdown i{
+    display: block;
+    cursor: pointer;
+}
+
+.chat .chatDiv .sent{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.chat .chatDiv .sent p{
+    background-color: #D5F9BA;
+}
+
+.chat .footer{
+    height: 60px;
+    background-color: #F3EEEA;
+    border: 1px solid #E2E2E2;
+}
+
+.chat .footer i{
+    color: #6B7376;
+    font-size: 20px;
+    cursor: pointer;
+}

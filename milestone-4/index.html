@@ -58,26 +58,31 @@
 
                         <div class="input-group mx-2">
                             <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
-                            <input type="text" class="form-control h-25" placeholder="Cerca o inizia una nuova chat">
+                            <input v-model="filterChat" @keyup="listFilter" type="text" class="form-control h-25" placeholder="Cerca o inizia una nuova chat">
                         </div>
 
                     </div>
 
                     <div class="contactsDiv">
-                        <div v-for="(contact,i) in contacts" @click="changeProfile(i)" class="contact d-flex justify-content-between align-items-center">
 
-                            <div class="contactProfile d-flex align-items-center">
-                                <img :src="contact.avatar" alt="contact profile">
-                                <div class="infoContact">
-                                    <h6 class="m-0">{{contact.name}}</h6>
-                                    <span>{{contact.messages[contact.messages.length - 1].message}}</span>
+                        <div v-for="(contact,i) in contacts" @click="changeProfile(i)">
+
+                            <div v-if="contact.visible" class="contact d-flex justify-content-between align-items-center">
+
+                                <div class="contactProfile d-flex align-items-center">
+                                    <img :src="contact.avatar" alt="contact profile">
+                                    <div class="infoContact">
+                                        <h6 class="m-0">{{contact.name}}</h6>
+                                        <span>{{contact.messages[contact.messages.length - 1].message}}</span>
+                                    </div>
                                 </div>
+    
+                                <div class="lastAccess">
+                                    <span>{{contact.messages[contact.messages.length - 1].date}}</span>
+                                </div>
+    
                             </div>
-
-                            <div class="lastAccess">
-                                <span>{{contact.messages[contact.messages.length - 1].date}}</span>
-                            </div>
-
+                            
                         </div>
                     </div>
 
@@ -108,7 +113,11 @@
                         <div  v-for="(singleMessage,i) in contacts[counter].messages">
                             <div :class="singleMessage.status" class="position-relative">
                                 <p class="message">{{singleMessage.message}}</p>
-                                <span class="dateMessageChat">{{singleMessage.date}}</span>    
+                                <span class="dateMessageChat">{{singleMessage.date}}</span>
+                                <div class="dropdown">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                                
                             </div>
                         </div>
 
