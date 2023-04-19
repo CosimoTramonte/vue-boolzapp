@@ -222,10 +222,10 @@
     color: #a0a0a0;
 }
 
-.chat .chatDiv .received .dropdown i{
+.chat .chatDiv .received .dropdown {
     display: none;
     position: absolute;
-    right: 100px;
+    left: 8px;
     top: 3px;
     color: #a0a0a0;
 }
@@ -236,6 +236,14 @@
     right: 8px;
     top: 3px;
     color: #a0a0a0;
+}
+
+.chat .chatDiv .received .dropdown:hover{
+    display: block;
+}
+
+.chat .chatDiv .received .message:hover ~ .dropdown{
+    display: block;
 }
 
 .chat .chatDiv .dropdown:hover i{

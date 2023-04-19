@@ -58,6 +58,10 @@ createApp({
             console.log(this.clock);
         },
 
+        deleteMessage(i){
+            this.contacts[this.counter].messages.splice(i,1)
+        }
+
     },
 
     computed: {
