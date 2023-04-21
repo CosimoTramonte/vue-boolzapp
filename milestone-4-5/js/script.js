@@ -34,6 +34,11 @@ createApp({
             this.contacts[this.counter].messages.push(newMessage);
             this.autoMessage()
             this.newMessageToSent=""  
+
+            setTimeout(() =>{
+                const divChat = document.querySelector(".chatDiv")
+                divChat.scrollTop = divChat.scrollHeight
+            },1)
         },
 
         autoMessage(){
@@ -49,8 +54,29 @@ createApp({
                 }
                 this.contacts[this.counter].messages.push(newAutoMessage);
 
+                setTimeout(() =>{
+                    const divChat = document.querySelector(".chatDiv")
+                    divChat.scrollTop = divChat.scrollHeight
+                },1)
+
             }, 1000)
             
+        },
+
+        getLastMessage(contact){
+            if(contact.messages.length > 0){
+                return contact.messages.at(-1).message
+            } else{
+                return "nessun messaggio"
+            }
+        },
+
+        getLastDate(contact){
+            if(contact.messages.length > 0){
+                return contact.messages.at(-1).date
+            } else{
+                return null
+            }
         },
 
         printClock(){

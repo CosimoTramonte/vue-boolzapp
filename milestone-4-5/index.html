@@ -81,12 +81,12 @@
                                     <img :src="contact.avatar" alt="contact profile">
                                     <div class="infoContact">
                                         <h6 class="m-0">{{contact.name}}</h6>
-                                        <span>{{contact.messages[contact.messages.length - 1].message}}</span>
+                                        <span>{{getLastMessage(contact)}}</span>
                                     </div>
                                 </div>
     
                                 <div class="lastAccess">
-                                    <span>{{contact.messages[contact.messages.length - 1].date}}</span>
+                                    <span>{{getLastDate(contact)}}</span>
                                 </div>
     
                             </div>
